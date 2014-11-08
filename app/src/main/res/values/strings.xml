@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HideDialer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main.phone.tooltip">Enter Phone Number</string>
+    <string name="main.nonumber.error">Must enter a Phone Number</string>
+    <string name="call_name">Dialer</string>
+
+</resources>

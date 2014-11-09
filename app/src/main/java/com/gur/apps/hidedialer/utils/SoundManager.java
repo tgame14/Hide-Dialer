@@ -3,6 +3,7 @@ package com.gur.apps.hidedialer.utils;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.widget.Toast;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
@@ -87,6 +88,10 @@ public class SoundManager
      */
     public void playSound(int soundId, int priority, int loopCount)
     {
+        if (this.soundIdStreamIdMap.containsKey(soundId))
+        {
+            return; //already playing, double playing would simply double register the stream in the soundIdStreamIdMap.
+        }
         int streamId = this.soundPool.play(soundId, this.vol, this.vol, priority, loopCount, 1.0F);
         this.soundIdStreamIdMap.put(soundId, streamId);
 
